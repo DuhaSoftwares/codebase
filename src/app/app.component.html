@@ -1,0 +1,12 @@
+<div class="d-flex" id="wrapper">
+    <spinner class="spinnerComponent"></spinner>
+    <left-side-menu *ngIf="_commonService.layoutViewModel.showLeftMenu"></left-side-menu>
+    <div id="page-content-wrapper">
+        <top-nav></top-nav>
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+        <footer-nav></footer-nav>
+    </div>
+    <right-side-menu *ngIf="_commonService.layoutViewModel.showRightMenu"></right-side-menu>
+</div>

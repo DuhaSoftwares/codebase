@@ -1,0 +1,45 @@
+<div class="border-end bg-white" [class]='_commonService.layoutViewModel.leftMenuClass' id="left-sidebar-wrapper"
+    *ngIf="_commonService.layoutViewModel.showLeftMenu">
+    <div
+        *ngIf="!(_commonService.layoutViewModel.loggedInUserType==1||_commonService.layoutViewModel.loggedInUserType==2)">
+        <div class="sidebar-heading border-bottom bg-light">End User</div>
+        <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shortcuts</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+            <a data-bs-target="#pageSubmenuLeft" data-bs-toggle="collapse" aria-expanded="false"
+                class="list-group-item list-group-item-action list-group-item-light p-3 dropdown-toggle">
+                MenuOptions
+            </a>
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" id="pageSubmenuLeft">
+                <li class="list-group-item p-3 "> <a href="#"> <i class="bi bi-1-circle"></i> Test1 </a> </li>
+                <li class="list-group-item p-3 "> <a href="#"> <i class="bi bi-1-circle"></i> Test2 </a> </li>
+                <li class="list-group-item p-3 "> <a href="#"> <i class="bi bi-1-circle"></i> Test3 </a> </li>
+            </ul>
+        </div>
+    </div>
+    <div *ngIf="_commonService.layoutViewModel.loggedInUserType==1||_commonService.layoutViewModel.loggedInUserType==2">
+
+        <div class="sidebar-heading border-bottom bg-light">SuperAdmin Side</div>
+        <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shortcuts</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+            <a data-bs-target="#pageSubmenuLeft" data-bs-toggle="collapse" aria-expanded="false"
+                class="list-group-item list-group-item-action list-group-item-light p-3 dropdown-toggle">
+                MenuOptions
+            </a>
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" id="pageSubmenuLeft">
+                <li class="list-group-item p-3 "> <a href="#"> <i class="bi bi-1-circle"></i> Test1 </a> </li>
+                <li class="list-group-item p-3 "> <a href="#"> <i class="bi bi-1-circle"></i> Test2 </a> </li>
+                <li class="list-group-item p-3 "> <a href="#"> <i class="bi bi-1-circle"></i> Test3 </a> </li>
+            </ul>
+        </div>
+    </div>
+</div>

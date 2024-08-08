@@ -1,0 +1,60 @@
+<form #signInForm="ngForm" (ngSubmit)="login(signInForm)">
+    <div class="row">
+
+        <div class="mb-3 input-container-validation">
+            <label class="form-label">User Name</label>
+            <input type="text" class="form-control" name="loginId" [(ngModel)]="viewModel.tokenRequest.loginId"
+                #loginId="ngModel" placeholder="{{viewModel.controlsInformation['loginId'].placeHolder}}"
+                [required]="viewModel.controlsInformation['loginId'].isRequired"
+                pattern="{{viewModel.controlsInformation['loginId'].pattern}}"
+                minlength="{{viewModel.controlsInformation['loginId'].minlength}}"
+                maxlength="{{viewModel.controlsInformation['loginId'].maxlength}}"
+                class="{{getValidationClass(loginId, viewModel.controlsInformation['loginId'])}}">
+            <div *ngIf="viewModel.controlsInformation['loginId'].hasError"
+                title="{{viewModel.controlsInformation['loginId'].placeHolder}}" class="invalid-input-icon">
+                <i class="bi bi-exclamation big-validation-icon"></i>
+                <small class="validation-span">{{viewModel.controlsInformation['loginId'].errorMessage}}</small>
+            </div>
+        </div>
+        <div class="mb-3 input-container-validation">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" [(ngModel)]="viewModel.tokenRequest.password"
+                #password="ngModel" placeholder="{{viewModel.controlsInformation['password'].placeHolder}}"
+                [required]="viewModel.controlsInformation['password'].isRequired"
+                pattern="{{viewModel.controlsInformation['password'].pattern}}"
+                minlength="{{viewModel.controlsInformation['password'].minlength}}"
+                maxlength="{{viewModel.controlsInformation['password'].maxlength}}"
+                class="{{getValidationClass(password, viewModel.controlsInformation['password'])}}">
+            <div *ngIf="viewModel.controlsInformation['password'].hasError"
+                title="{{viewModel.controlsInformation['password'].errorMessage}}" class="invalid-input-icon">
+                <i class="bi bi-exclamation big-validation-icon"></i>
+                <small class="validation-span">{{viewModel.controlsInformation['password'].errorMessage}}</small>
+            </div>
+        </div>
+        <div class="mb-3 input-container-validation">
+            <label class="form-label">Role Type</label>
+            <select class="form-control" name="roleType" #roleType="ngModel"
+                [(ngModel)]="viewModel.tokenRequest.roleType"
+                [required]="viewModel.controlsInformation['roleType'].isRequired"
+                pattern="{{viewModel.controlsInformation['roleType'].pattern}}"
+                minlength="{{viewModel.controlsInformation['roleType'].minlength}}"
+                maxlength="{{viewModel.controlsInformation['roleType'].maxlength}}"
+                class="{{getValidationClass(roleType, viewModel.controlsInformation['roleType'])}}">
+                <option *ngFor="let item of viewModel.rolesList" value="{{item.key}}">
+                    {{item.value}}
+                </option>
+            </select>
+            <div *ngIf="viewModel.controlsInformation['roleType'].hasError"
+                title="{{viewModel.controlsInformation['roleType'].errorMessage}}" class="invalid-input-icon">
+                <i class="bi bi-exclamation big-validation-icon"></i>
+                <small class="validation-span">{{viewModel.controlsInformation['roleType'].errorMessage}}</small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Login</button>
+        </div>
+    </div>
+
+
+
+</form>

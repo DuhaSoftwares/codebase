@@ -1,0 +1,22 @@
+<div *ngIf="_commonService.loaderInfo.showLoader">
+    <div class="container">
+        <div class="row">
+            <div id="loader">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="loading"></div>
+            </div>
+
+            <p class="spinner-message"
+                *ngIf="_commonService.loaderInfo.showLoader && _commonService.loaderInfo.message !== ''">
+                {{_commonService.loaderInfo.message}}
+            </p>
+        </div>
+    </div>
+</div>

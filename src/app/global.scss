@@ -1,0 +1,133 @@
+.bigIcon {
+  height: 50px;
+  width: 50px;
+}
+
+.fill-redIcon {
+  fill: red;
+}
+
+.smallIcon {
+  height: 20px;
+  width: 20px;
+}
+.spinnerComponent {
+  width: 0;
+}
+#wrapper {
+  overflow-x: hidden;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+/*Left Side Menu CSS*/
+#left-sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  transition: margin 0.25s ease-out;
+}
+
+#left-sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#left-sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+body.sb-sidenav-toggled #wrapper #left-sidebar-wrapper {
+  margin-left: 0;
+}
+.leftSideMenuToggle {
+  margin-left: -15rem !important;
+}
+
+@media (min-width: 768px) {
+  #left-sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  body.sb-sidenav-toggled #wrapper #left-sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+/*Right Side Menu CSS*/
+#right-sidebar-wrapper {
+  min-height: 100vh;
+  margin-right: -15rem;
+  transition: margin 0.25s ease-out;
+}
+
+#right-sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#right-sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+body.sb-sidenav-toggled #wrapper #right-sidebar-wrapper {
+  margin-right: 0;
+}
+
+@media (min-width: 768px) {
+  #right-sidebar-wrapper {
+    margin-right: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  body.sb-sidenav-toggled #wrapper #right-sidebar-wrapper {
+    margin-right: -15rem;
+  }
+}
+.rightSideMenuToggle {
+  margin-right: -15rem !important;
+}
+
+//Add these in media queries for different sizes of screen and update css as well.
+//  If some pages have different css overide these classes in the css of that component
+.input-container-validation {
+  position: relative;
+  // display: inline-block;
+  .invalid-input {
+    border: 2px solid red; /* Add a red border to the input */
+    background-color: #ffebeb; /* Change the background color to a light red */
+
+    // color: #ff0000; /* Change the text color to red */
+    // padding-right: 30px; /* Adjust the padding to control the spacing between the icon and input text */
+  }
+  .invalid-input-icon {
+    position: absolute;
+    // transform: translateY(-50%);
+    right: 20px; /* Adjust the right position as needed */
+    top: 38%; /* Vertically center the icon */
+    color: #ff0000; /* Change the text color to red */
+  }
+  .big-validation-icon {
+    font-size: 2rem;
+  }
+  .validation-span {
+    bottom: 8px;
+    position: relative;
+    font-size: 0.675em;
+  }
+  .valid-input:focus {
+    border: 2px solid green; /* Add a green border to the input when it's focused and valid */
+    background-color: #e7f7e7; /* Change the background color to a light green */
+    // color: #ffffff; /* Change the text color to green */
+  }
+}
